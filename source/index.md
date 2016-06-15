@@ -11,21 +11,10 @@ search: true
 
 # Guia de migração Cielo
 
-Esse guia tem como propósito facilitar a migração da integração entre as soluções Webservice 1.5 e API 3.0.
+Esse guia tem como propósito facilitar a migração da integração entre as soluções Webservice 1.5 e API 3.0. Antes de ler esse guia, é altamente recomentado que você tenha lido o manual de integração da solução para qual pretende migrar sua integração atual. Os manuais podem ser encontrados em:
 
-A seção das tabelas comparativas mostra, campo a campo, cada especificidade das soluções em cada caso de uso; as colunas `ORDENAR` são utilizadas para colocar o foco em uma das soluções; por exemplo:
-
-## Guiar por elementos da 1.5
-
-Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `ORDENAR` dos elementos da 1.5;
-
-![Tabela 1.5](images/tabela-1.5.png)
-
-## Guiar por propriedades da 3.0
-
-Caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `ORDENAR` das propriedades 3.0.
-
-![Tabela 3.0](images/tabela-3.0.png)
+* [Solução Webservice 1.5](https://developercielo.github.io/Webservice-1.5)
+* [Solução API 3.0](https://developercielo.github.io/Webservice-3.0)
 
 ## Visão Geral
 
@@ -59,6 +48,22 @@ Além dessas diferenças, as requisições HTTP também são feitas em ambientes
 #### Consulta de vendas
 
 <aside class="request"><span class="method get">GET</span> <span class="endpoint">https://apiquery.cieloeCommerce.cielo.com.br/1/sales/{PaymentId}</span></aside>
+
+### Tabelas comparativas
+
+A seção das tabelas comparativas mostra, campo a campo, cada especificidade das soluções em cada caso de uso; as colunas `ORDENAR` são utilizadas para colocar o foco em uma das soluções.
+
+#### Guiar por solução 1.5
+
+Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `ORDENAR` dos elementos da 1.5;
+
+![Tabela 1.5](images/tabela-1.5.png)
+
+#### Guiar por solução 3.0
+
+Caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `ORDENAR` das propriedades 3.0.
+
+![Tabela 3.0](images/tabela-3.0.png)
 
 ## Suporte Cielo
 
@@ -95,7 +100,7 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 
 ## Tabela da Requisição de Crédito
 
-|Guiar por|propriedades da 3.0|   |Guiar por|elementos da 1.5|Observações|
+|Guiar por|solução 3.0|   |Guiar por|solução 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   |  1|dados-ec.numero|O 1.5 recebe EC no corpo do request e o 3.0 recebe o MerchantId no header. Estes campos não possuem o mesmo valor|
 |  2|--Header.MerchantKey|   |  2|dados-ec.chave|O 1.5 recebe a Chave no corpo do request e o 3.0 recebe o MerchantKey no header. Estes campos não possuem o mesmo valor|
@@ -154,7 +159,7 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 
 ## Tabela da Resposta de Crédito
 
-|Guiar por|propriedades da 3.0|   |Guiar por|elementos da 1.5|Observações|
+|Guiar por|solução 3.0|   |Guiar por|solução 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   | 30| --|O 1.5 não retorna os dados de request no response|
 |  2|--Header.MerchantKey|   | 31| --|O 1.5 não retorna os dados de request no response|
@@ -230,7 +235,7 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 
 ## Tabela da Requisição de Débito
 
-|Guiar por|propriedades da 3.0|   |Guiar por|elementos da 1.5|Observações|
+|Guiar por|solução 3.0|   |Guiar por|solução 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   |  1|dados-ec.numero|O 1.5 recebe EC no corpo do request e o 3.0 recebe o MerchantId no header. Estes campos não possuem o mesmo valor|
 |  2|--Header.MerchantKey|   |  2|dados-ec.chave|O 1.5 recebe a Chave no corpo do request e o 3.0 recebe o MerchantKey no header. Estes campos não possuem o mesmo valor|
@@ -286,7 +291,7 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 
 ## Tabela da Resposta de Débito
 
-|Guiar por|propriedades da 3.0|   |Guiar por|elementos da 1.5|Observações|
+|Guiar por|solução 3.0|   |Guiar por|solução 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   | 30| --|O 1.5 não retorna os dados de request no response|
 |  2|--Header.MerchantKey|   | 31| --|O 1.5 não retorna os dados de request no response|
