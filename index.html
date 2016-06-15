@@ -92,6 +92,39 @@
 
 <p>A terceira grande diferença entre as duas soluções está no AVS; como a API 3.0 ainda não suporta AVS, não há, na API, uma forma para enviá-los.</p>
 
+<h3 id="ambientes-da-3.0">Ambientes da 3.0</h3>
+
+<p>Além dessas diferenças, as requisições HTTP também são feitas em ambientes diferentes utilizado métodos HTTP específicos para cada tipo de requisição; são eles:</p>
+
+<ul>
+<li>Ambiente Produção
+
+<ul>
+<li>Requisição de transação: https://api.cieloeCommerce.cielo.com.br/</li>
+<li>Consulta transação: https://apiquery.cieloeCommerce.cielo.com.br/</li>
+</ul></li>
+<li>Ambiente Sandbox
+
+<ul>
+<li>Requisição de transação: https://apisandbox.cieloeCommerce.cielo.com.br</li>
+<li>Consulta transação: https://apiquerysandbox.cieloeCommerce.cielo.com.br</li>
+</ul></li>
+</ul>
+
+<h3 id="métodos-http-da-3.0">Métodos HTTP da 3.0</h3>
+
+<h4 id="criação-de-vendas">Criação de vendas</h4>
+
+<aside class="request"><span class="method post">POST</span> <span class="endpoint">https://api.cieloeCommerce.cielo.com.br/1/sales/</span></aside>
+
+<h4 id="captura-ou-cancelamento-de-vendas">Captura ou cancelamento de vendas</h4>
+
+<aside class="request"><span class="method put">PUT</span> <span class="endpoint">https://api.cieloeCommerce.cielo.com.br/1/sales/{PaymentId}/capture</span></aside>
+
+<h4 id="consulta-de-vendas">Consulta de vendas</h4>
+
+<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://apiquery.cieloeCommerce.cielo.com.br/1/sales/{PaymentId}</span></aside>
+
 <h2 id="suporte-cielo">Suporte Cielo</h2>
 
 <p>Após a leitura deste manual, caso ainda persistam dúvidas (técnicas ou não), a Cielo disponibiliza o suporte técnico 24 horas por dia, 7 dias por semana em idiomas (Português e Inglês), nos seguintes contatos:</p>
