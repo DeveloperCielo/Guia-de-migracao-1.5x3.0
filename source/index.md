@@ -11,7 +11,22 @@ search: true
 
 # Guia de migração Cielo
 
-Esse guia tem como propósito
+Esse guia tem como propósito facilitar a migração da integração entre as soluções Webservice 1.5 e API 3.0.
+
+A seção das tabelas comparativas mostra, campo a campo, cada especificidade das soluções em cada caso de uso; as colunas `ORDENAR` são utilizadas para colocar o foco em uma das soluções; por exemplo:
+
+* caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `ORDENAR` dos elementos da 1.5;
+* caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `ORDENAR` das propriedades 3.0.
+
+![Ordenação da tabela](images/tabelas.gif)
+
+## Visão Geral
+
+De forma geral, a primeira grande diferença entre as duas soluções está no envio das credenciais do estabelecimento comercial. No Webservice 1.5, as credenciais eram enviadas no nó `dados-ec`, através dos elementos `numero` e `chave`; na API 3.0, as credenciais são enviadas utilizando cabeçalhos HTTP, através dos campos de cabeçalho `MerchantId` e `MerchantKey`.
+
+A segunda grande diferença entre as duas soluções está no envio dos dados relacionados ao comprador; como na solução Webservice 1.5 esses dados não são enviados na integração, a loja poderá precisar implementar essa coleta de dados caso queira enviá-los.
+
+A terceira grande diferença entre as duas soluções está no AVS; como a API 3.0 ainda não suporta AVS, não há, na API, uma forma para enviá-los.
 
 ## Suporte Cielo
 
@@ -44,154 +59,12 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 * **Transação**: é o pedido de compra do portador do cartão na Cielo.
 * **VBV (Verified by Visa)**: Programa internacional da Visa que possibilita a autenticação do comprador no momento de uma compra em ambiente eCommerce.
 
-# Certificado Extended Validation
-
-## O que é Certificado SSL?
-
-O Certificado SSL para servidor web oferece autenticidade e integridade dos dados de um web site, proporcionando aos clientes das lojas virtuais a garantia de que estão realmente acessando o site que desejam, e não uma um site fraudador.
-
-Empresas especializadas são responsáveis por fazer a validação do domínio e, dependendo do tipo de certificado, também da entidade detentora do domínio.
-
-### Internet Explorer:
-
-![Certificado EV Internet Explorer](./images/certificado-ie.jpg)
-
-### Firefox
-
-![Certificado EV Firefox](./images/certificado-firefox.jpg)
-
-### Google Chrome
-
-![Certificado EV Google Chrome](./images/certificado-chrome.jpg)
-
-## O que é Certificado EV SSL?
-
-O Certificado EV foi lançado no mercado recentemente e garante um nível de segurança maior para os clientes das lojas virtuais.
-
-Trata-se de um certificado de maior confiança e quando o https for acessado a barra de endereço ficará verde, dando mais confiabilidade aos visitantes do site.
-
-## Como instalar o Certificado Extended Validation no servidor da Loja?
-
-Basta instalar os três arquivos a seguir na Trustedstore do servidor. A Cielo não oferece suporte para a instalação do Certificado. Caso não esteja seguro sobre como realizar a instalação do Certificado EV, então você deverá ser contatado o suporte do fornecedor do seu servidor.
-
-* [Certificado Raiz](./attachment/Raiz.crt)
-* [Certificado Intermediária](./attachment/Intermediaria.crt)
-* [Certificado E-Commerce Cielo](./attachment/eCommerce.cielo.com.br.crt)
-
-<aside class="notice">Caso seu servidor seja uma distribuição Linux e você tenha familiaridade e acesso ssh, então o <a href="./attachment/cielo.sh">Instalador Linux - cielo.sh</a> poderá ajudá-lo com a instalação. <strong>Apenas utilize o instalador se você souber o que está fazendo</strong>. Na dúvida, entre em contato com o suporte do fornecedor do seu servidor.</aside>
-
-## Passo a Passo para a Instalação
-
-### Instalação no Servidor da Loja Virtual
-
-O passo a passo para a instalação do Certificado EV deverá ser contatado o suporte do fornecedor do seu servidor.
-
-<aside class="warning">A Cielo não oferece suporte para a instalação do Certificado.</aside>
-
-### Acesso do Cliente à Loja Virtual
-
-Normalmente, o browser faz a atualização do Certificado automaticamente, caso não o faça e o cliente entre em contato deverá ser informado os seguintes passos:
-
-#### 1o Passo:
-
-Salvar os três arquivos abaixo em uma pasta nova, ou que relembre facilmente, pois será utilizada posteriormente:
-
-* [Certificado Raiz](./attachment/Raiz.crt)
-* [Certificado Intermediária](./attachment/Intermediaria.crt)
-* [Certificado E-Commerce Cielo](./attachment/eCommerce.cielo.com.br.crt)
-
-#### 2o Passo:
-
-No “Internet Explorer”, clique no menu “Ferramentas” e acesse as “Opções da Internet”:
-
-![Instalar IE](./images/certificado-instalar-ie-1.jpg)
-
-No “Firefox”, clique no menu “Abrir Menu” e acesse “Avançado” e “Opções”:
-
-![Instalar FF](./images/certificado-instalar-ff-1.jpg)
-
-No “Chrome”, clique no “Personalizar e Controlar o Google Chrome” e acesse “Configurações” e “Mostrar configurações avançadas... “Alterar Configurações de Proxy e “Conteúdo” e Certificados:
-
-![Instalar GC](./images/certificado-instalar-gc-1.jpg)
-
-#### 3o Passo:
-
-No Internet Explorer, em “Certificados”, clique em “Importar”.
-
-![Instalar IE](./images/certificado-instalar-ie-2.jpg)
-
-No Firefox clique em “Ver Certificados”, clique em “Importar”
-
-![Instalar FF](./images/certificado-instalar-ff-2.jpg)
-
-No Chrome clique em “Gerenciar Certificados”, clique em “Importar”
-
-![Instalar GC](./images/certificado-instalar-gc-2.jpg)
-
-#### 4o Passo:
-
-No Internet Explorer e Chrome “Assistente para Importação de Certificados”, clique em “Avançar”.
-
-![Instalar IE e GC](./images/certificado-instalar-ie-gc-3.jpg)
-
-![Instalar IE e GC](./images/certificado-instalar-ie-gc-4.jpg)
-
-No Firefox “Aba Servidores ”, clique em “Importar”
-
-![Instalar FF](./images/certificado-instalar-ff-3.jpg)
-
-#### 5o Passo:
-
-No Chrome e Internet Explorer “Assistente para Importação de Certificados”, clique em “Procurar”, procure a pasta onde estão os arquivos e selecione o arquivo “eCommerce.cielo.com.br.crt, clique em “Abrir” e em seguida “Avançar”.
-
-![Instalar IE e GC](./images/certificado-instalar-ie-gc-5.jpg)
-
-![Instalar IE e GC](./images/certificado-instalar-ie-gc-6.jpg)
-
-#### 6o Passo:
-
-Selecionar a opção desejada: adicionar o Certificado em uma pasta padrão ou procurar a pasta de sua escolha.
-
-![Instalar IE e GC](./images/certificado-instalar-ie-gc-7.jpg)
-
-#### 7o Passo:
-
-Clique em “Concluir”.
-
-![Instalar IE e GC](./images/certificado-instalar-ie-gc-8.jpg)
-
-#### 8o Passo:
-
-Clique em “Ok” para concluir a importação.
-
-![Instalar IE e GC](./images/certificado-instalar-ie-gc-9.jpg)
-
-<aside class="notice">No Firefox não consta a mensagem de Importação com Êxito, apenas conclui a importação.</aside>
-
-O Certificado poderá ser visualizado na aba padrão “Outras Pessoas” ou na escolhida pelo cliente.
-
-![Instalar IE e GC](./images/certificado-instalar-ie-gc-10.jpg)
-
-#### 9o Passo:
-
-Repita o mesmo procedimento para os 3 arquivos enviados.
-
-## Dúvidas
-
-Em caso de dúvidas em qualquer etapa ou outras informações técnicas, entre em contato com o Suporte Web do Cielo e-Commerce nos seguintes canais:
-
-* **Email:** [cieloeCommerce@cielo.com.br](mailto:cieloeCommerce@cielo.com.br)
-* **Capitais:** 4002-9700
-* **Demais Cidades:** 0800 570 1700
-
-Horário de atendimento: 24h por dia, 7 dias por semana.
-
 # Integração com cartão de crédito
 
 ## Tabela da Requisição de Crédito
 
-|Ordem|3.0|   |Ordem|1.5|Observações|
-|-----|---|---|-----|---|-------------|
+|Ordenar|propriedades da 3.0|   |Ordenar|elementos da 1.5|Observações|
+|-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   |  1|dados-ec.numero|O 1.5 recebe EC no corpo do request e o 3.0 recebe o MerchantId no header. Estes campos não possuem o mesmo valor|
 |  2|--Header.MerchantKey|   |  2|dados-ec.chave|O 1.5 recebe a Chave no corpo do request e o 3.0 recebe o MerchantKey no header. Estes campos não possuem o mesmo valor|
 |  3|--Header.RequestId|   | 30| --|No 1.5 não existe campo com o identificador do Request|
@@ -249,8 +122,8 @@ Horário de atendimento: 24h por dia, 7 dias por semana.
 
 ## Tabela da Resposta de Crédito
 
-|Ordem|3.0|   |Ordem|1.5|Observações|
-|-----|---|---|-----|---|-------------|
+|Ordenar|propriedades da 3.0|   |Ordenar|elementos da 1.5|Observações|
+|-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   | 30| --|O 1.5 não retorna os dados de request no response|
 |  2|--Header.MerchantKey|   | 31| --|O 1.5 não retorna os dados de request no response|
 |  3|--Header.RequestId|   | 32| --|
@@ -325,8 +198,8 @@ Horário de atendimento: 24h por dia, 7 dias por semana.
 
 ## Tabela da Requisição de Débito
 
-|Ordem|3.0|   |Ordem|1.5|Observações|
-|-----|---|---|-----|---|-------------|
+|Ordenar|propriedades da 3.0|   |Ordenar|elementos da 1.5|Observações|
+|-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   |  1|dados-ec.numero|O 1.5 recebe EC no corpo do request e o 3.0 recebe o MerchantId no header. Estes campos não possuem o mesmo valor|
 |  2|--Header.MerchantKey|   |  2|dados-ec.chave|O 1.5 recebe a Chave no corpo do request e o 3.0 recebe o MerchantKey no header. Estes campos não possuem o mesmo valor|
 |  3|--Header.RequestId|   | 30| --|No 1.5 não existe campo com o identificador do Request|
@@ -381,8 +254,8 @@ Horário de atendimento: 24h por dia, 7 dias por semana.
 
 ## Tabela da Resposta de Débito
 
-|Ordem|3.0|   |Ordem|1.5|Observações|
-|-----|---|---|-----|---|-------------|
+|Ordenar|propriedades da 3.0|   |Ordenar|elementos da 1.5|Observações|
+|-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   | 30| --|O 1.5 não retorna os dados de request no response|
 |  2|--Header.MerchantKey|   | 31| --|O 1.5 não retorna os dados de request no response|
 |  3|--Header.RequestId|   | 32| --|
