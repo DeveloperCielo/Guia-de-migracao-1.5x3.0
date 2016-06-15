@@ -15,10 +15,17 @@ Esse guia tem como propósito facilitar a migração da integração entre as so
 
 A seção das tabelas comparativas mostra, campo a campo, cada especificidade das soluções em cada caso de uso; as colunas `ORDENAR` são utilizadas para colocar o foco em uma das soluções; por exemplo:
 
-* caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `ORDENAR` dos elementos da 1.5;
-* caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `ORDENAR` das propriedades 3.0.
+## Guiar por elementos da 1.5
 
-![Ordenação da tabela](images/tabelas.gif)
+Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `ORDENAR` dos elementos da 1.5;
+
+![Tabela 1.5](images/tabela-1.5.png)
+
+## Guiar por propriedades da 3.0
+
+Caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `ORDENAR` das propriedades 3.0.
+
+![Tabela 3.0](images/tabela-3.0.png)
 
 ## Visão Geral
 
