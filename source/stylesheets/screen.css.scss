@@ -606,11 +606,11 @@ html, body {
       .header {
         background-image: url("../images/bg.gif");
         background-repeat: no-repeat;
-        background-position: center right;
-        background-position-x: 68px;
+        background-position: center left;
         min-width: 70px;
         cursor: pointer;
         border-bottom: 3px solid transparent;
+        padding-left: 20px;
       }
 
       .headerSortDown {

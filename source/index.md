@@ -88,7 +88,7 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 
 ## Tabela da Requisição de Crédito
 
-|Ordenar|propriedades da 3.0|   |Ordenar|elementos da 1.5|Observações|
+|Guiar por|propriedades da 3.0|   |Guiar por|elementos da 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   |  1|dados-ec.numero|O 1.5 recebe EC no corpo do request e o 3.0 recebe o MerchantId no header. Estes campos não possuem o mesmo valor|
 |  2|--Header.MerchantKey|   |  2|dados-ec.chave|O 1.5 recebe a Chave no corpo do request e o 3.0 recebe o MerchantKey no header. Estes campos não possuem o mesmo valor|
@@ -147,7 +147,7 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 
 ## Tabela da Resposta de Crédito
 
-|Ordenar|propriedades da 3.0|   |Ordenar|elementos da 1.5|Observações|
+|Guiar por|propriedades da 3.0|   |Guiar por|elementos da 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   | 30| --|O 1.5 não retorna os dados de request no response|
 |  2|--Header.MerchantKey|   | 31| --|O 1.5 não retorna os dados de request no response|
@@ -223,7 +223,7 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 
 ## Tabela da Requisição de Débito
 
-|Ordenar|propriedades da 3.0|   |Ordenar|elementos da 1.5|Observações|
+|Guiar por|propriedades da 3.0|   |Guiar por|elementos da 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   |  1|dados-ec.numero|O 1.5 recebe EC no corpo do request e o 3.0 recebe o MerchantId no header. Estes campos não possuem o mesmo valor|
 |  2|--Header.MerchantKey|   |  2|dados-ec.chave|O 1.5 recebe a Chave no corpo do request e o 3.0 recebe o MerchantKey no header. Estes campos não possuem o mesmo valor|
@@ -279,7 +279,7 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 
 ## Tabela da Resposta de Débito
 
-|Ordenar|propriedades da 3.0|   |Ordenar|elementos da 1.5|Observações|
+|Guiar por|propriedades da 3.0|   |Guiar por|elementos da 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   | 30| --|O 1.5 não retorna os dados de request no response|
 |  2|--Header.MerchantKey|   | 31| --|O 1.5 não retorna os dados de request no response|
