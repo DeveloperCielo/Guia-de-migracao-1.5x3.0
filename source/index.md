@@ -51,17 +51,17 @@ Além dessas diferenças, as requisições HTTP também são feitas em ambientes
 
 ### Tabelas comparativas
 
-A seção das tabelas comparativas mostra, campo a campo, cada especificidade das soluções em cada caso de uso; as colunas `ORDENAR` são utilizadas para colocar o foco em uma das soluções.
+A seção das tabelas comparativas mostra, campo a campo, cada especificidade das soluções em cada caso de uso; as colunas `GUIAR POR` são utilizadas para colocar o foco em uma das soluções.
 
 #### Guiar por solução 1.5
 
-Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `ORDENAR` dos elementos da 1.5;
+Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `GUIAR POR` dos elementos da 1.5;
 
 ![Tabela 1.5](images/tabela-1.5.png)
 
 #### Guiar por solução 3.0
 
-Caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `ORDENAR` das propriedades 3.0.
+Caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `GUIAR POR` das propriedades 3.0.
 
 ![Tabela 3.0](images/tabela-3.0.png)
 
@@ -99,6 +99,8 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 # Integração com cartão de crédito
 
 ## Tabela da Requisição de Crédito
+
+Nessa seção você poderá analisar, campo a campo, cada especificidade das soluções no cenário de uma requisição de venda por crédito. Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `GUIAR POR` dos elementos da 1.5; caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `GUIAR POR` das propriedades 3.0.
 
 |Guiar por|solução 3.0|   |Guiar por|solução 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
@@ -158,6 +160,8 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 | 54| --|   | 29|avs.dados-avs.cep|O 3.0 ainda não suporta AVS|
 
 ## Tabela da Resposta de Crédito
+
+Nessa seção você poderá analisar, campo a campo, cada especificidade das soluções no cenário da resposta de uma requisição de venda por crédito. Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `GUIAR POR` dos elementos da 1.5; caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `GUIAR POR` das propriedades 3.0.
 
 |Guiar por|solução 3.0|   |Guiar por|solução 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
@@ -235,6 +239,8 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 
 ## Tabela da Requisição de Débito
 
+Nessa seção você poderá analisar, campo a campo, cada especificidade das soluções no cenário de uma requisição de venda por débito. Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `GUIAR POR` dos elementos da 1.5; caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `GUIAR POR` das propriedades 3.0.
+
 |Guiar por|solução 3.0|   |Guiar por|solução 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
 |  1|--Header.MerchantId|   |  1|dados-ec.numero|O 1.5 recebe EC no corpo do request e o 3.0 recebe o MerchantId no header. Estes campos não possuem o mesmo valor|
@@ -290,6 +296,8 @@ Para facilitar o entendimento, listamos abaixo um pequeno glossário com os prin
 | 51| --|   | 29|avs.dados-avs.cep|O 3.0 ainda não suporta AVS|
 
 ## Tabela da Resposta de Débito
+
+Nessa seção você poderá analisar, campo a campo, cada especificidade das soluções no cenário da resposta de uma requisição de venda por débito. Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna `GUIAR POR` dos elementos da 1.5; caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna `GUIAR POR` das propriedades 3.0.
 
 |Guiar por|solução 3.0|   |Guiar por|solução 1.5|Observações|
 |-------|-------------------|---|-------|----------------|-----------|
