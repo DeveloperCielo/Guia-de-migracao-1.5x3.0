@@ -73,7 +73,12 @@
             <div class="content no-dark-box">
                 <h1 id="guia-de-migração-cielo">Guia de migração Cielo</h1>
 
-<p>Esse guia tem como propósito facilitar a migração da integração da solução Webservice 1.5 para a API 3.0. Antes de ler esse guia, é altamente recomentado que você tenha lido o manual de integração da <a href="https://developercielo.github.io/Webservice-3.0">Solução API 3.0</a>.</p>
+<p>Esse guia tem como propósito facilitar a migração da integração entre as soluções Webservice 1.5 e API 3.0. Antes de ler esse guia, é altamente recomentado que você tenha lido o manual de integração da solução para qual pretende migrar sua integração atual. Os manuais podem ser encontrados em:</p>
+
+<ul>
+<li><a href="https://developercielo.github.io/Webservice-1.5">Solução Webservice 1.5</a></li>
+<li><a href="https://developercielo.github.io/Webservice-3.0">Solução API 3.0</a></li>
+</ul>
 
 <h2 id="visão-geral">Visão Geral</h2>
 
@@ -81,7 +86,7 @@
 
 <p>A segunda grande diferença entre as duas soluções está no envio dos dados relacionados ao comprador; como na solução Webservice 1.5 esses dados não são enviados na integração, a loja poderá precisar implementar essa coleta de dados caso queira enviá-los.</p>
 
-<p>A terceira grande diferença entre nos dados do comprador, que não está disponível na solução Webservice 1.5.</p>
+<p>A terceira grande diferença entre as duas soluções está no AVS; como a API 3.0 ainda não suporta AVS, não há, na API, uma forma para enviá-los.</p>
 
 <h3 id="ambientes-da-3.0">Ambientes da 3.0</h3>
 
@@ -118,10 +123,19 @@
 
 <h3 id="tabelas-comparativas">Tabelas comparativas</h3>
 
-<p>A seção das tabelas comparativas mostra, campo a campo, cada especificidade das soluções em cada caso de uso; as colunas <code class="prettyprint">GUIAR POR</code> são utilizadas para colocar o foco em uma das soluções. Você poderá utilizar a coluna <code class="prettyprint">GUIAR POR</code> para modificar o referencial, colocando foco no Webservice 1.5 ou na API 3.0 conforme sua necessidade.</p>
+<p>A seção das tabelas comparativas mostra, campo a campo, cada especificidade das soluções em cada caso de uso; as colunas <code class="prettyprint">GUIAR POR</code> são utilizadas para colocar o foco em uma das soluções.</p>
 
-<p><img alt="Tabela 1.5" src="images/tabela-1.5.png" />
-<img alt="Tabela 3.0" src="images/tabela-3.0.png" /></p>
+<h4 id="guiar-por-solução-1.5">Guiar por solução 1.5</h4>
+
+<p>Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna <code class="prettyprint">GUIAR POR</code> dos elementos da 1.5;</p>
+
+<p><img alt="Tabela 1.5" src="images/tabela-1.5.png" /></p>
+
+<h4 id="guiar-por-solução-3.0">Guiar por solução 3.0</h4>
+
+<p>Caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna <code class="prettyprint">GUIAR POR</code> das propriedades 3.0.</p>
+
+<p><img alt="Tabela 3.0" src="images/tabela-3.0.png" /></p>
 
 <h2 id="suporte-cielo">Suporte Cielo</h2>
 
@@ -165,7 +179,7 @@
 
 <h2 id="tabela-da-requisição-de-crédito">Tabela da Requisição de Crédito</h2>
 
-<p>Nessa seção você poderá analisar, campo a campo, cada especificidade das soluções no cenário de uma requisição de venda por crédito. Você poderá utilizar a coluna <code class="prettyprint">GUIAR POR</code> para modificar o referencial, colocando foco no Webservice 1.5 ou na API 3.0 conforme sua necessidade.</p>
+<p>Nessa seção você poderá analisar, campo a campo, cada especificidade das soluções no cenário de uma requisição de venda por crédito. Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna <code class="prettyprint">GUIAR POR</code> dos elementos da 1.5; caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna <code class="prettyprint">GUIAR POR</code> das propriedades 3.0.</p>
 
 <table><thead>
 <tr>
@@ -535,7 +549,7 @@
 <td></td>
 <td>5</td>
 <td>dados-portador.indicador</td>
-<td>O campo de indicação de <strong>envio</strong> do CVV não existe pois o CVV é obrigatório.</td>
+<td>No 3.0 não existe campo para informar o envio do CVV.</td>
 </tr>
 <tr>
 <td>46</td>
@@ -613,7 +627,7 @@
 
 <h2 id="tabela-da-resposta-de-crédito">Tabela da Resposta de Crédito</h2>
 
-<p>Nessa seção você poderá analisar, campo a campo, cada especificidade das soluções no cenário da resposta de uma requisição de venda por crédito. Você poderá utilizar a coluna <code class="prettyprint">GUIAR POR</code> para modificar o referencial, colocando foco no Webservice 1.5 ou na API 3.0 conforme sua necessidade.</p>
+<p>Nessa seção você poderá analisar, campo a campo, cada especificidade das soluções no cenário da resposta de uma requisição de venda por crédito. Caso sua integração atual utilize a solução Webservice 1.5 e você queira fazer a comparação com a API 3.0, basta selecionar a coluna <code class="prettyprint">GUIAR POR</code> dos elementos da 1.5; caso sua integração atual utilize a solução API 3.0 e você queira fazer a comparação com o Webservice 1.5, basta selecionar a coluna <code class="prettyprint">GUIAR POR</code> das propriedades 3.0.</p>
 
 <table><thead>
 <tr>
@@ -2135,5 +2149,16 @@
 
             </div>
         </div>
+        <!-- Hotjar Tracking Code for https://developercielo.github.io/guia-de-migracao-1.5x3.0/ -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:602200,hjsv:5};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
     </body>
     </html>
