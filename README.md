@@ -1,1 +1,4 @@
-# Guia de migração do Webservice 1.5 para a API 3.0 da Cielo
+Tutoriais
+=========
+
+Esse repositório de tutoriais foi substituído pelo novo ambiente; os tutoriais podem ser encontrados em [https://developercielo.github.io](https://developercielo.github.io)
